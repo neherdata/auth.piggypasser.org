@@ -29,10 +29,21 @@
 	</div>
 	<div id="wrapper">
 		<div id="title"><i>Piggy Passer</i></div>
-		<div id="buttons">
-			<button id="pill-button" onclick="window.location.href='addplayers.html';" value="addplayers">
-				Continue
-			</button>
+		
+		</ br>
+		
+		<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+        <div id="appleid-signin" data-mode="center-align" data-type="continue" data-color="white" data-border="true" data-border-radius="20" data-width="265" data-height="45"></div>
+        <script type="text/javascript">
+            AppleID.auth.init({
+                clientId : '[CLIENT_ID]',
+                scope : '[SCOPES]',
+                redirectURI : '[REDIRECT_URI]',
+                state : '[STATE]',
+                nonce : '[NONCE]',
+                usePopup : true
+            });
+        </script>
 		</div>
 
 	</div>
